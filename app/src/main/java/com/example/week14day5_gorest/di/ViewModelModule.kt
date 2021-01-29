@@ -1,6 +1,5 @@
 package com.example.week14day5_gorest.di
 
-import android.view.View
 import androidx.lifecycle.ViewModel
 import com.example.week14day5_gorest.viewmodel.UserViewModel
 import dagger.Binds

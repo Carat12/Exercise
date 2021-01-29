@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.AbstractSavedStateViewModelFactory
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.week14day5_gorest.R
 import com.example.week14day5_gorest.di.DaggerAppComponent
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
         recycler_view.apply {
             adapter = userAdapter
             layoutManager = LinearLayoutManager(this@MainActivity)
+            addItemDecoration(DividerItemDecoration(this@MainActivity, DividerItemDecoration.VERTICAL))
         }
 
         viewModel.userList.observe(this, {
