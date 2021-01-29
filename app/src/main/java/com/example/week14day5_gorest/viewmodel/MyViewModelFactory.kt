@@ -11,10 +11,5 @@ class MyViewModelFactory @Inject constructor(
 
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         return creators[modelClass]?.get() as T
-        //Log.d("woozi", "type: $modelClass; ${UserViewModel::class}")
-        /*if (modelClass == UserViewModel::class)
-            return UserViewModel(repository) as T
-        else
-            throw IllegalArgumentException("Please use valid viewModel")*/
     }
 }

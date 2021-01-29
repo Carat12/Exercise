@@ -14,10 +14,4 @@ class UserViewModel @Inject constructor(val repository: UserRepository): ViewMod
             emit(repository.getUsers().data)
         }
     }
-    /*
-    fun getUsers(){
-        userList = liveData {
-            emit(repository.getUsers().data)
-        }
-    }*/
 }
